@@ -1,0 +1,42 @@
+{
+  "kind": "collectionType",
+  "collectionName": "lifestyles",
+  "info": {
+    "singularName": "lifestyle",
+    "pluralName": "lifestyles",
+    "displayName": "Lifestyle",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "lifestyle_name": {
+      "type": "string"
+    },
+    "lifestyle_image": {
+      "type": "media",
+      "multiple": true,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "category_lifestyles": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::category-lifestyle.category-lifestyle",
+      "mappedBy": "lifestyles"
+    },
+    "lifestyle_detail": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::lifestyle-detail.lifestyle-detail",
+      "mappedBy": "lifestyle"
+    }
+  }
+}

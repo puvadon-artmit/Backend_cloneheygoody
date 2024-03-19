@@ -1,0 +1,40 @@
+version: "3"
+services:
+  strapi:
+    container_name: strapi
+    build:
+      context: ./hey-ac
+      dockerfile: dockerfile
+    image: strapi:latest
+    env_file: ./hey-ac/.env
+    # environment:
+    #   DATABASE_CLIENT: ${DATABASE_CLIENT}
+    #   DATABASE_PORT: ${PORT}  
+    #   DATABASE_HOST: ${HOST} 
+    #   API_TOKEN_SALT: ${API_TOKEN_SALT} 
+    #   JWT_SECRET: ${JWT_SECRET}
+    #   ADMIN_JWT_SECRET: ${ADMIN_JWT_SECRET}
+    #   NODE_ENV: ${NODE_ENV}
+    ports:
+      - "1337:1337"
+    networks:
+      - strapi
+  next_fontend: 
+    container_name: isr
+    build: 
+      context: ./heygoody
+      dockerfile: dockerfile
+    ports:
+      - 3000:3000
+    networks:
+      - strapi
+    volumes:
+      - ./heygoody/src:/app/src
+    command: ["npm", "run", "dev"]
+    depends_on:
+      - strapi 
+networks:
+  strapi: 
+
+
+   

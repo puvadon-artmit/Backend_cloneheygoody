@@ -1,0 +1,27 @@
+{
+  "kind": "collectionType",
+  "collectionName": "category_abouts",
+  "info": {
+    "singularName": "category-about",
+    "pluralName": "category-abouts",
+    "displayName": "category_abouts",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string",
+      "required": true,
+      "unique": true
+    },
+    "about_cars": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::about-car.about-car",
+      "inversedBy": "category_abouts"
+    }
+  }
+}

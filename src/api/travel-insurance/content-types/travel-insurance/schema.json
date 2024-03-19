@@ -1,0 +1,34 @@
+{
+  "kind": "collectionType",
+  "collectionName": "travel_insurances",
+  "info": {
+    "singularName": "travel-insurance",
+    "pluralName": "travel-insurances",
+    "displayName": "Travel_insurance"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name_travel": {
+      "type": "string"
+    },
+    "travel_title": {
+      "type": "string"
+    },
+    "travel_image": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": true
+    },
+    "travel_date": {
+      "type": "richtext"
+    }
+  }
+}

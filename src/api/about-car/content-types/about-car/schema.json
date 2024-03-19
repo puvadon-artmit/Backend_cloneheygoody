@@ -1,0 +1,44 @@
+{
+  "kind": "collectionType",
+  "collectionName": "about_cars",
+  "info": {
+    "singularName": "about-car",
+    "pluralName": "about-cars",
+    "displayName": "about_cars",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string",
+      "required": true,
+      "unique": true
+    },
+    "category_abouts": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::category-about.category-about",
+      "mappedBy": "about_cars"
+    },
+    "image_about": {
+      "type": "media",
+      "multiple": true,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "about_detail": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::about-detail.about-detail",
+      "mappedBy": "about_car"
+    }
+  }
+}

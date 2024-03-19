@@ -1,0 +1,33 @@
+{
+  "kind": "collectionType",
+  "collectionName": "blogs_cars",
+  "info": {
+    "singularName": "blogs-car",
+    "pluralName": "blogs-cars",
+    "displayName": "blogs_cars",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "blog_name": {
+      "type": "string"
+    },
+    "blog_image": {
+      "type": "media",
+      "multiple": true,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "blog_section": {
+      "type": "string"
+    }
+  }
+}

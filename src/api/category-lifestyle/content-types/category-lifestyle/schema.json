@@ -1,0 +1,25 @@
+{
+  "kind": "collectionType",
+  "collectionName": "category_lifestyles",
+  "info": {
+    "singularName": "category-lifestyle",
+    "pluralName": "category-lifestyles",
+    "displayName": "category_lifestyle",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "lifestyle_type": {
+      "type": "string"
+    },
+    "lifestyles": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::lifestyle.lifestyle",
+      "inversedBy": "category_lifestyles"
+    }
+  }
+}

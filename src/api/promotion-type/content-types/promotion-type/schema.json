@@ -1,0 +1,24 @@
+{
+  "kind": "collectionType",
+  "collectionName": "promotion_types",
+  "info": {
+    "singularName": "promotion-type",
+    "pluralName": "promotion-types",
+    "displayName": "promotion_type"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "type_pm": {
+      "type": "string"
+    },
+    "promotion_cars": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::promotion-car.promotion-car",
+      "inversedBy": "promotion_types"
+    }
+  }
+}

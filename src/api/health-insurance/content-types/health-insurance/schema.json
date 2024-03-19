@@ -1,0 +1,35 @@
+{
+  "kind": "collectionType",
+  "collectionName": "health_insurances",
+  "info": {
+    "singularName": "health-insurance",
+    "pluralName": "health-insurances",
+    "displayName": "Health insurance",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name_health": {
+      "type": "string"
+    },
+    "health_titel": {
+      "type": "string"
+    },
+    "health_image": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": true
+    },
+    "health_date": {
+      "type": "richtext"
+    }
+  }
+}

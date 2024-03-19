@@ -1,0 +1,45 @@
+{
+  "kind": "collectionType",
+  "collectionName": "promotion_cars",
+  "info": {
+    "singularName": "promotion-car",
+    "pluralName": "promotion-cars",
+    "displayName": "promotion_cars",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "promotion_name": {
+      "type": "string"
+    },
+    "promotion_image": {
+      "type": "media",
+      "multiple": true,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "promotion_date": {
+      "type": "richtext"
+    },
+    "promotion_types": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::promotion-type.promotion-type",
+      "mappedBy": "promotion_cars"
+    },
+    "promotion_detail": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::promotion-detail.promotion-detail",
+      "mappedBy": "promotion_car"
+    }
+  }
+}

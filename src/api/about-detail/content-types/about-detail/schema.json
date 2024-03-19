@@ -1,0 +1,25 @@
+{
+  "kind": "collectionType",
+  "collectionName": "about_details",
+  "info": {
+    "singularName": "about-detail",
+    "pluralName": "about-details",
+    "displayName": "about_detail",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "about_car": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::about-car.about-car",
+      "inversedBy": "about_detail"
+    },
+    "detail": {
+      "type": "richtext"
+    }
+  }
+}

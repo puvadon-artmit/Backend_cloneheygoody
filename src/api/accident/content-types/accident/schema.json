@@ -1,0 +1,36 @@
+{
+  "kind": "collectionType",
+  "collectionName": "accidents",
+  "info": {
+    "singularName": "accident",
+    "pluralName": "accidents",
+    "displayName": "accident",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name_accident": {
+      "type": "string"
+    },
+    "accident_img": {
+      "type": "media",
+      "multiple": true,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "accident_title": {
+      "type": "string"
+    },
+    "accident_date": {
+      "type": "string"
+    }
+  }
+}

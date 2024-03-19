@@ -1,0 +1,43 @@
+{
+  "kind": "collectionType",
+  "collectionName": "insurance_cars",
+  "info": {
+    "singularName": "insurance-car",
+    "pluralName": "insurance-cars",
+    "displayName": "insurance-car",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name_insurance": {
+      "type": "string"
+    },
+    "collision": {
+      "type": "string"
+    },
+    "lost": {
+      "type": "string"
+    },
+    "fire": {
+      "type": "string"
+    },
+    "property": {
+      "type": "string"
+    },
+    "person": {
+      "type": "string"
+    },
+    "accident_pn": {
+      "type": "string"
+    },
+    "treatment": {
+      "type": "string"
+    },
+    "bail": {
+      "type": "string"
+    }
+  }
+}

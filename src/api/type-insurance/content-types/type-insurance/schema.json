@@ -1,0 +1,18 @@
+{
+  "kind": "collectionType",
+  "collectionName": "type_insurances",
+  "info": {
+    "singularName": "type-insurance",
+    "pluralName": "type-insurances",
+    "displayName": "type-insurance"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name_class": {
+      "type": "string"
+    }
+  }
+}

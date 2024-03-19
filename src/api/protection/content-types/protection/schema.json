@@ -1,0 +1,33 @@
+{
+  "kind": "collectionType",
+  "collectionName": "protections",
+  "info": {
+    "singularName": "protection",
+    "pluralName": "protections",
+    "displayName": "Protection",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "protection_name": {
+      "type": "string"
+    },
+    "protections_image": {
+      "type": "media",
+      "multiple": true,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "name_logo": {
+      "type": "richtext"
+    }
+  }
+}
